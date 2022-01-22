@@ -8,10 +8,8 @@
 # Input: [1, 2, 3, 4, 5, 6], [6, 3, 7]
 # Output: false
 
-from calendar import c
-from cgitb import small
-
-
+# is a subset
+'''
 def is_subset(big_array, small_array):
     hash = {}
     count = 0
@@ -28,3 +26,23 @@ def is_subset(big_array, small_array):
 
 
 is_subset([1, 2, 3, 4, 5, 6], [6, 3, 2])
+'''
+
+# first non repeating character
+word = "leet"
+
+
+def non_repeating(word):
+    chars = {}
+    i = 0
+    while i < len(word):
+        chars[word[i]] = True
+        i += 1
+    count = 0
+    while i < len(word):
+        chars[word[i]]
+        i += 1
+    return chars
+
+
+print(non_repeating(word))
