@@ -4,3 +4,14 @@
 
 # Input: 9
 # Output: 21 (as this is the 9th number of the Fibonacci Sequence)
+
+def fib_nums(num):
+    fib_nums = [0, 1, 1]
+    i = 1
+    while len(fib_nums) < num:
+        fib_nums.append(fib_nums[i] + fib_nums[i + 1])
+        i += 1
+    return fib_nums[-1]
+
+
+print(fib_nums(9))
