@@ -19,3 +19,24 @@
 # 1
 
 # Resulting in 9 steps. So for input n = 12, the return value would be 9.
+num = int(input("Please enter a number : "))
+
+
+def collatz_conjecture(num):
+    steps = 0
+    while num > 1:
+        if num % 2 == 0:
+            num /= 2
+            steps += 1
+            print("On step #{} your number is equal to: {}".format(steps, num))
+        else:
+            num = num * 3 + 1
+            steps += 1
+            print("On step #{} your number is equal to: {}".format(steps, num))
+    return steps
+
+
+print("the number {} took {} steps to get to 1".format(
+    num, collatz_conjecture(num)))
+# => The number 12 took 9 steps to get to 1
+# example input 129001 took 193 steps to get to 1
