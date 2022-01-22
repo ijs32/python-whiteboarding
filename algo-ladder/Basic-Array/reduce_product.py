@@ -1,4 +1,15 @@
-# Given an array of numbers, write a function that returns a new array whose values are the original array’s value doubled.
+# Write a function that accepts an array of numbers and returns the product of all the numbers.
 
-# Input: [4, 2, 5, 99, -4]
-# Output: [8, 4, 10, 198, -8]
+# Input: [1, 2, 3, 4]
+# Output: 24
+
+# Explanation: (1 x 2 x 3 x 4) = 24
+
+def reduce_product(nums):
+    product = 1
+    for num in nums:
+        product *= num
+    return product
+
+
+print(reduce_product([1, 2, 3, 4])) #=> 24
