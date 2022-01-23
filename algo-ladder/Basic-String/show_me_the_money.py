@@ -5,3 +5,10 @@
 
 # Input: “abcdefghijklmnopqrstuvwxyz”
 # Output: false
+
+def money_pls(string):
+    return ("$" in string)
+
+
+print(money_pls(string="abcdefghijklmnopqrstuvwxyz"))  # => False
+print(money_pls(string="i hate $ but i love money i know i know im crazy"))  # => True

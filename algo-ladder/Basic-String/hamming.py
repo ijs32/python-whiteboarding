@@ -7,3 +7,14 @@
 
 # Input: "ABCDEFG", "ABCDEFG",
 # Output: 0
+
+def hamming(string_1, string_2):
+    count = 0
+    for i in range(len(string_1)):
+        if (string_1[i] != string_2[i]):
+            count += 1
+    return count
+
+
+print(hamming(string_1="ABCDEFG", string_2="ABCDEFG"))  # => 0
+print(hamming(string_1="ABCDEFG", string_2="ABCXEOG"))  # => 2

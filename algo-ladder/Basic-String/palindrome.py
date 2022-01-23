@@ -5,3 +5,15 @@
 
 # Input: “baloney”
 # Output: false
+
+def is_palindrome(string):
+    reversed = ""
+    i = len(string) - 1
+    while i >= 0:
+        reversed += string[i]
+        i -= 1
+    return reversed == string
+
+
+print(is_palindrome(string="racecar"))  # => True
+print(is_palindrome(string="baloney"))  # => False

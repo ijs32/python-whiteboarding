@@ -2,3 +2,18 @@
 
 # Input: “hello, how are your porcupines today?”
 # Output: “hElLo, HoW ArE YoUr pOrCuPiNeS ToDaY?”
+
+string = "hello, how are your porcupines today?"
+
+
+def alt_caps(string):
+    new_string = ""
+    for i in range(len(string)):
+        if i % 2 == 0:
+            new_string += string[i].upper()
+        else:
+            new_string += string[i]
+    return new_string
+
+
+print(alt_caps(string))
