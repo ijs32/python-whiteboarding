@@ -7,11 +7,9 @@
 
 def fib_nums(num):
     fib_nums = [0, 1, 1]
-    i = 1
-    while len(fib_nums) < num:
-        fib_nums.append(fib_nums[i] + fib_nums[i + 1])
-        i += 1
+    while len(fib_nums) <= num:
+        fib_nums.append(fib_nums[-2] + fib_nums[-1])
     return fib_nums[-1]
 
 
-print(fib_nums(9))
+print(fib_nums(10))
