@@ -5,16 +5,18 @@
 # Input: [3, 4, 5, 6]
 # Output: [12, 15, 18, 20, 24, 30]
 
-li = [3, 4, 5, 6]
+arr = [3, 4, 5, 6]
+
+# O(n^2) need to fix, going to come back to it but struggling to think of an O(n) solution at the moment
 
 
-def products(li):
+def products(arr):
     products = []
-    for i, num1 in enumerate(li):
-        for i2, num2 in enumerate(li):
-            if not (num1 * num2) in products and (i != i2):
+    for i, num1 in enumerate(arr):
+        for i2, num2 in enumerate(arr):
+            if not (num1 * num2) in products and (num1 != num2):
                 products.append(num1 * num2)
     return products
 
 
-print(products(li))  # => [12, 15, 18, 20, 24, 30]
+print(products(arr))  # => [12, 15, 18, 20, 24, 30]
