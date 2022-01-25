@@ -29,6 +29,7 @@ is_subset([1, 2, 3, 4, 5, 6], [6, 3, 2])
 '''
 
 # first non repeating character
+'''
 word = "leet"
 
 
@@ -46,3 +47,49 @@ def non_repeating(word):
 
 
 print(non_repeating(word))
+'''
+# Given a square matrix, calculate the absolute difference between the sums of its diagonals.
+# 1 2 3
+# 4 5 6
+# 9 8 9
+# absolute difference is 2.
+
+# matrix = [
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [9, 8, 9]
+# ]
+
+
+# def difference_of_matrix(arr):
+#     sum_1 = 0
+#     sum_2 = 0
+#     for i, arr1 in enumerate(arr):
+#         sum_1 += arr1[i]
+#         sum_2 += arr1[-1 + -i]
+#     return abs(sum_1 - sum_2)
+
+
+# print(difference_of_matrix(matrix))
+
+# Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+
+# You must implement a solution with a linear runtime complexity and use only constant extra space.
+
+# Input: nums = [4,1,2,1,2]
+# Output: 4
+
+def only_one(arr):
+    dict = {}
+    for i, num in enumerate(arr):
+        if num in dict:
+            dict[num] += 1
+        else:
+            dict[num] = 1
+
+    for key, value in dict.items():
+        if value == 1:
+            return key
+
+
+print("The answer is :", only_one(arr=[4, 1, 2, 1, 2]))
