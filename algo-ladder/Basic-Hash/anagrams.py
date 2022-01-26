@@ -8,3 +8,15 @@
 # Input: “frog”, “bear”
 # Output: false
 
+def anagrams(word1, word2):
+    hash = {}
+    for char in word1:
+        hash[char] = char
+    for char in word2:
+        if not char in hash:
+            return False
+    return True
+
+
+print(anagrams("silent", "listen"))  # => True
+print(anagrams("frog", "bear"))  # => False
