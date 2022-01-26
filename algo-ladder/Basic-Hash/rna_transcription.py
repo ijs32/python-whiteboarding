@@ -13,3 +13,18 @@
 
 # Input: 'ACGTGGTCTTAA'
 # Output: 'UGCACCAGAAUU'
+
+def rna_transcribe(string):
+    rna_hash = {
+        "A": "U",
+        "T": "A",
+        "C": "G",
+        "G": "C"
+    }
+    rna_string = ""
+    for char in string:
+        rna_string += rna_hash[char]
+    return rna_string
+
+
+print(rna_transcribe('ACGTGGTCTTAA'))
