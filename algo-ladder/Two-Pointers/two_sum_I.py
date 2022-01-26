@@ -7,3 +7,14 @@
 
 # Input: [1, 2, 3, 4, 5]
 # Output: false (While 1, 2, 3, and 4 altogether add up to 10, we're seeking just one pair of numbers.)
+
+def two_sum(nums):
+    for num in nums:
+        for num2 in nums:
+            if num + num2 == 10 and num != num2:
+                return [num, num2]
+    return False
+
+
+print(two_sum([2, 5, 3, 1, 0, 7, 11])) # => [3, 7]
+print(two_sum([1, 2, 3, 4, 5])) # => false

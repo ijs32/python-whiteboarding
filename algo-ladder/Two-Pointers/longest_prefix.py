@@ -14,3 +14,12 @@
 # Note:
 
 # All given inputs are in lowercase letters a-z.
+arr = ["dog", "racecar", "car"]
+arr2 = ["flower", "flow", "flight"]
+
+
+def longest_prefix(arr):
+  return
+
+print(longest_prefix(arr))
+print(longest_prefix(arr2))

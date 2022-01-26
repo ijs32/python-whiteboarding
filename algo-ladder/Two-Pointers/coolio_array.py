@@ -11,3 +11,17 @@
 
 # [1, 2, 3, 97, 98, 99]
 # [90, 20, 70, 100, 30, 80, 10]
+
+def coolio(arr):
+    count = 0
+    for i, num in enumerate(arr):
+        if num + arr[-i - 1] == 100:
+            count += 1
+        elif (num == arr[-i - 1]) and num == 100:
+            count += 1
+    return count == len(arr)
+
+
+print(coolio([1, 2, 3, 97, 98, 99]))  # => True
+print(coolio([90, 20, 70, 100, 30, 80, 10]))  # => True
+print(coolio([90, 20, 70, 10, 30, 80, 10]))  # => False
