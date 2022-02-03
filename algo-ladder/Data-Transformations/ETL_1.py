@@ -2,8 +2,8 @@
 
 # Input:
 
-# First argument: ["a", "e", "i", "o", "u"]
-# Second argument: 1
+arr = ["a", "e", "i", "o", "u"]
+num = 1
 
 # Output:
 
@@ -14,3 +14,13 @@
 # 'o' => 1,
 # 'u' => 1
 # }
+
+
+def etl_one(arr, num):
+    answer = {}
+    for char in arr:
+        answer[char] = num
+    return answer
+
+
+print(etl_one(arr, num))
