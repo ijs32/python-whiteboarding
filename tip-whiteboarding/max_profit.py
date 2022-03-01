@@ -22,7 +22,7 @@ print(max_profit(prices))  # => 5
 #     max = 0
 #     for i, num in enumerate(prices):
 #         numbers[num] = i
-#     for key, value in numbers.items():          unfinished attempt
+#     for key, value in numbers.items():        # unfinished attempt
 #         if key > max and max - min > profit:
 #           max = key
 #     return numbers
